@@ -18,6 +18,7 @@ const validateLogin = [
   ];
 
 // Log in
+// used to login a user as well as add the session user's information to the frontend Redux store
 router.post(
     '/',
     validateLogin,
