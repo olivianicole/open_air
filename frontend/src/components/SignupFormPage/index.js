@@ -27,44 +27,40 @@ function SignupFormPage() {
                 });
     };
     return (
-        <div>
-            <body className='signup'>
-                <div className='site_title'>
-                        open air
+        <div className='signup'>
+            <div className='site_title'>
+                    open air
+            </div>
+            <form onSubmit={handleSubmit} className='form_container'>
+                <div className='errors'>
+                    {errors.map((error, idx) => <p key={idx}>{error}</p>)}
                 </div>
-                <form onSubmit={handleSubmit} className='form_container'>
-                    <div className='errors'>
-                        {errors.map((error, idx) => <p key={idx}>{error}</p>)}
-                    </div>
-                    <input 
-                        className='form_email'
-                        type='email'
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        placeholder='email'
-                        />
-                    <input 
-                        className='form_password'
-                        type='password'
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                        placeholder='password'
-                        />
-                    <input 
-                        className='form_blog_name'
-                        type='text'
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                        placeholder='blog name'
-                        />
-                    <button type='submit' className='form_submit_button'>Sign up</button>
-                
-
-                </form>
-            </body>
+                <input 
+                    className='form_email'
+                    type='email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    placeholder='email'
+                    />
+                <input 
+                    className='form_password'
+                    type='password'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    placeholder='password'
+                    />
+                <input 
+                    className='form_blog_name'
+                    type='text'
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    required
+                    placeholder='blog name'
+                    />
+                <button type='submit' className='form_submit_button'>Sign up</button>
+            </form>
         </div>
     )
 }

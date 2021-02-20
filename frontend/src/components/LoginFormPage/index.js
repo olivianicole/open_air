@@ -28,34 +28,32 @@ function LoginFormPage() {
     }
 
     return (
-        <div>
-            <body className='login'>
-                <div className='site_title'>
-                    open air
+        <div className='login'>
+            <div className='site_title'>
+                open air
+            </div>
+            <form onSubmit = {handleSubmit} className='form_container'>
+                <div className='errors' style={{ visibility: errors.length === 0 ? 'hidden' : 'visible'}}>
+                    {errors.map((error, idx) => <p key={idx}>{error}</p>)}
                 </div>
-                <form onSubmit = {handleSubmit} className='form_container'>
-                    <div className='errors' style={{ visibility: errors.length === 0 ? 'hidden' : 'visible'}}>
-                        {errors.map((error, idx) => <p key={idx}>{error}</p>)}
-                    </div>
-                    <input 
-                        className='form_email'
-                        type='email'
-                        value={credential}
-                        onChange={(e) => setCredential(e.target.value)}
-                        required
-                        placeholder='Email'
-                        />
-                    <input
-                        className='form_password'
-                        type='password'
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                        placeholder='Password'
-                        />
-                    <button type='submit' className='form_submit_button'>Log in</button>
-                </form>
-            </body>
+                <input 
+                    className='form_email'
+                    type='email'
+                    value={credential}
+                    onChange={(e) => setCredential(e.target.value)}
+                    required
+                    placeholder='Email'
+                    />
+                <input
+                    className='form_password'
+                    type='password'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    placeholder='Password'
+                    />
+                <button type='submit' className='form_submit_button'>Log in</button>
+            </form>
         </div>
     );
 }
