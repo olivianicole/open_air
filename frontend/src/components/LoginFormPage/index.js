@@ -28,35 +28,35 @@ function LoginFormPage() {
     }
 
     return (
-        <html>
-            <div className='site_title'>
-                open air
-            </div>
-  
-            <form onSubmit = {handleSubmit} className='form_container'>
-                <ul>
-                    {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-                </ul>
-                <input 
-                className='form_email'
-                type='email'
-                value={credential}
-                onChange={(e) => setCredential(e.target.value)}
-                required
-                placeholder='Email'
-                />
-                <input
-                className='form_password'
-                type='password'
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                placeholder='Password'
-                />
-                <button type='submit' className='form_submit_button'>Log in</button>
-            </form>
-    
-        </html>
+        <div>
+            <body className='login'>
+                <div className='site_title'>
+                    open air
+                </div>
+                <form onSubmit = {handleSubmit} className='form_container'>
+                    <div className='errors' style={{ visibility: errors.length === 0 ? 'hidden' : 'visible'}}>
+                        {errors.map((error, idx) => <p key={idx}>{error}</p>)}
+                    </div>
+                    <input 
+                        className='form_email'
+                        type='email'
+                        value={credential}
+                        onChange={(e) => setCredential(e.target.value)}
+                        required
+                        placeholder='Email'
+                        />
+                    <input
+                        className='form_password'
+                        type='password'
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        placeholder='Password'
+                        />
+                    <button type='submit' className='form_submit_button'>Log in</button>
+                </form>
+            </body>
+        </div>
     );
 }
 

@@ -1,11 +1,10 @@
-html {
-    background: url(https://i.pinimg.com/564x/91/9e/fb/919efbd4001ec1b343eda3e752743a78.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-    
+body {
+    background: url(https://i.pinimg.com/564x/91/9e/fb/919efbd4001ec1b343eda3e752743a78.jpg);
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 .form_container {
     display: flex;
     flex-direction: column;
@@ -59,7 +58,6 @@ html {
     margin: 0px 10px 10px 10px;
     width: 300px;
     height: 40px;
-    
 }
 
 .form_submit_button {
@@ -69,9 +67,21 @@ html {
     width: 308px;
     height: 40px;
     background-color: beige;
-    
+    margin: 20px 10px 10px 10px;
+
     font-size: large;
     font-weight: bold;
     color: #7B7060
+}
+
+.errors {
+    color: beige;
+    background-color:rgba(123, 112, 96, 0.5);
+    padding: 2px;
+    margin: 20px auto 40px auto;
+
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 2px rgba(123, 112, 96, 0.4);
 }
 
