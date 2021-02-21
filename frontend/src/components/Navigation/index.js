@@ -15,12 +15,12 @@ function Navigation ({ isLoaded }){
     } else {
         sessionLinks = (
             <>
-                <li>
-                    <NavLink to='/login' className='option' activeStyle={{ color: 'olive'}}>log in</NavLink>
-                </li>
-                <li>
-                    <NavLink to='/signup' className='option' activeStyle={{ color: 'olive'}}>sign up</NavLink>
-                </li>
+                <div className='option'>
+                    <NavLink to='/login' className='fas fa-user-plus active' activeStyle={{ color: 'olive'}}>   log in</NavLink>
+                </div>
+                <div className='option'>
+                    <NavLink to='/signup' className='fas fa-sign-in-alt active' activeStyle={{ color: 'olive'}}>   sign up</NavLink>
+                </div>
             </>
         );
     }
@@ -30,13 +30,9 @@ function Navigation ({ isLoaded }){
             <div className='header'>
                 <h2 className='title'>o • a</h2>
             </div>
-            <div className='navBar'>
-                <ul>
-                    <li>
-                    <NavLink exact to='/' className='option'>dashboard</NavLink>
-                    </li>
+            <div className='navBar option'>
+                    <NavLink exact to='/' className='fas fa-home active' >   dashboard</NavLink>
                     {isLoaded && sessionLinks}
-                </ul>
             </div>
         </div>
     );
