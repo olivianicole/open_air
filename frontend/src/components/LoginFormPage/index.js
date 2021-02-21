@@ -29,10 +29,11 @@ function LoginFormPage() {
 
     return (
         <div className='login'>
-            <div className='site_title'>
+
+            <form onSubmit = {handleSubmit} className='form_container'>
+                 <div className='site_title'>
                 open air
             </div>
-            <form onSubmit = {handleSubmit} className='form_container'>
                 <div className='errors' style={{ visibility: errors.length === 0 ? 'hidden' : 'visible'}}>
                     {errors.map((error, idx) => <p key={idx}>{error}</p>)}
                 </div>
@@ -52,7 +53,7 @@ function LoginFormPage() {
                     required
                     placeholder='Password'
                     />
-                <button type='submit' className='form_submit_button'>Log in</button>
+                <button type='submit' className='form_submit_button'>log in</button>
             </form>
         </div>
     );

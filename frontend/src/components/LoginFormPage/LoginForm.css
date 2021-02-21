@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     margin: auto;
     left: 0;
     right: 0;
@@ -68,7 +68,7 @@ body {
     border: #f4c2c2 solid 0.5px;
     border-radius: 2px;
 
-    width: 308px;
+    width: 300px;
     height: 40px;
     background-color: #f4c2c2;
     margin: 20px 10px 10px 10px;

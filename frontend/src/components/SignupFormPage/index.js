@@ -29,10 +29,10 @@ function SignupFormPage() {
     };
     return (
         <div className='signup'>
-            <div className='site_title'>
-                    open air
-            </div>
             <form onSubmit={handleSubmit} className='form_container'>
+                <div className='site_title'>
+                        open air
+                </div>
                 <div className='errors'>
                     {errors.map((error, idx) => <p key={idx}>{error}</p>)}
                 </div>
@@ -60,7 +60,7 @@ function SignupFormPage() {
                     required
                     placeholder='blog name'
                     />
-                <button type='submit' className='form_submit_button'>Sign up</button>
+                <button type='submit' className='form_submit_button'>sign up</button>
             </form>
         </div>
     )
