@@ -2,17 +2,17 @@
 
 }
 .header {
-    color: beige;
+    color: white;
     width: 100%;
     height: auto;
-    background-color: #7B7060;
+    background-color: #6294B7;
     position: absolute;
     top: 0px;
     left: 0px;
 
 }
 .navBar {
-    background-color: beige;
+    background-color: rgba(224, 194, 194, 0.6);
     width: 15%;
     height: 100%;
     position: absolute;
@@ -34,34 +34,28 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 10px 15px 10px;
-    color: #7B7060;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
 
 }
 
-.active {
-    text-decoration: none;
-    color: #7B7060;
-    font-weight: bold;
-}
 
 .logout_button {
-    border: rgba(123, 112, 96, 0.4) solid 0.5px;
+    border: #f4c2c2 solid 0.5px;
     border-radius: 5px;
 
     width: 100px;
     height: auto;
-    background-color: beige;
+    background-color: #f4c2c2;
     margin: 10px 10px 10px 10px;
     padding: 10px;
 
     font-size: 20px;
     font-weight: bold;
-    color: #7B7060;
+    color: white;
 }
 
 .logout_list {
     padding: 10px 10px 10px 10px;
-    color: #7B7060;
+    color: #f4c2c2;
 }

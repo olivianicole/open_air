@@ -1,5 +1,5 @@
 body {
-    background: url(https://i.pinimg.com/564x/91/9e/fb/919efbd4001ec1b343eda3e752743a78.jpg);
+    background: url(http://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max);
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -19,8 +19,7 @@ body {
     text-align: center;
     height: 450px;
     width: 500px;
-    border: rgba(210, 180, 140, 0.4) solid 2px;
-    border-radius: 10px;
+   
    
 }
 
@@ -39,7 +38,7 @@ body {
     padding-top: 30px;
 
 
-    color:beige;
+    color: white;
     font-size: 100px;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -66,27 +65,27 @@ body {
 }
 
 .form_submit_button {
-    border: beige solid 0.5px;
+    border: #f4c2c2 solid 0.5px;
     border-radius: 2px;
 
     width: 308px;
     height: 40px;
-    background-color: beige;
+    background-color: #f4c2c2;
     margin: 20px 10px 10px 10px;
 
     font-size: large;
     font-weight: bold;
-    color: #7B7060
+    color: white;
 }
 
 .errors {
-    color: beige;
-    background-color:rgba(123, 112, 96, 0.5);
+    color: white;
+    background-color:rgba(244, 194, 194, 0.5);
     padding: 2px;
-    margin: 20px auto 40px auto;
+    margin: 60px auto 40px auto;
 
     border: none;
     border-radius: 5px;
-    box-shadow: 0 0 2px 2px rgba(123, 112, 96, 0.4);
+    box-shadow: 0 0 2px 2px rgba(224, 194, 194, 0.4);
 }
 
