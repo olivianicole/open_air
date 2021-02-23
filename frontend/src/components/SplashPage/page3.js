@@ -6,10 +6,9 @@ export default function Page3 (){
     
     return (
         <div className='page3'>
-            <div className='site_title'>open air</div>
-            <div className='descriptor_text'>Air your thoughts, air your opinions, see what others are putting out in the open.</div>
-            <button className='button'>sign up</button>
-            <button className='button'>log in</button>
+            <div className='site_title'>create your blog</div>
+            <div className='descriptor_text'>    ... open air allows you to create a platform that represents who you are</div>
+            
         </div>
     )
 }

@@ -6,10 +6,13 @@ export default function Page5 (){
     
     return (
         <div className='page5'>
-            <div className='site_title'>open air</div>
-            <div className='descriptor_text'>Air your thoughts, air your opinions, see what others are putting out in the open.</div>
-            <button className='button'>sign up</button>
-            <button className='button'>log in</button>
+            <div className='icon_container'>
+                <div className='post_icon'>••• text •••</div>
+                <div className='post_icon'>• photo •</div>
+                <div className='post_icon'>• link •</div>
+                <div className='post_icon'>• video •</div>
+            </div>
+            
         </div>
     )
 }

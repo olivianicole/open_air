@@ -9,37 +9,48 @@
 
 .page1 {
     height: 370px;
-    border: black solid 5px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
 }
 .page2 {
+    display: flex;
     height: 510px;
-    border: black solid 5px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
 }
 .page3 {
     height: 510px;
-    border: black solid 5px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
 }
 .page4 {
     height: 510px;
-    border: black solid 5px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
 }
 .page5 {
     height: 510px;
-    border: black solid 5px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
 }
 .page6 {
     height: 510px;
-    border: black solid 5px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
 }
@@ -112,4 +123,33 @@
     font-weight: bold;
     color: white;
     
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    border: #6294B7 solid 2px;
+    text-align: center;
+    border-radius: 100px;
+    background-color: #6294B7;
+    color: #f4c2c2;
+    font-size: 150px;
+}
+
+.icon_container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.post_icon {
+    color: white;
+    background-color:salmon;
+    margin: 50px;
+    height: 175px;
+    width:  160px;
+    border-radius: 100px;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
