@@ -8,8 +8,8 @@ export default function Page1 (){
         <div className='page1'>
             <div className='site_title'>open air</div>
             <div className='descriptor_text'>Air your thoughts, air your ideas, see what others are putting out in the open.</div>
-            <button className='button'>sign up</button>
-            <button className='button'>log in</button>
+            <button className='nav_button'>sign up</button>
+            <button className='nav_button'>log in</button>
         </div>
     )
 }

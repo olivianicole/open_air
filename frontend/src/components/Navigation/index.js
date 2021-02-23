@@ -10,11 +10,19 @@ function Navigation ({ isLoaded }){
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
-            <ProfileButton user={sessionUser} />
-        ); 
+            <>
+                <div className='navBar option'>
+                    <NavLink exact to='/' className='fas fa-home' style={{color: '#6294B7', textDecoration: 'none'}} activeStyle={{ color: 'white', textDecoration: 'none'}}>   dashboard</NavLink>
+                </div>
+                <ProfileButton user={sessionUser} />
+            </>
+        )
     } else {
         sessionLinks = (
             <>
+                <div className='option'>
+                    <NavLink exact to='/' className='fas fa-home' style={{color: '#6294B7', textDecoration: 'none'}} activeStyle={{ color: 'white', textDecoration: 'none'}}>   home</NavLink>
+                </div>
                 <div className='option'>
                     <NavLink to='/login' className='fas fa-user-plus' style={{color: '#6294B7', textDecoration: 'none'}} activeStyle={{ color: 'white', textDecoration: 'none'}}>   log in</NavLink>
                 </div>
@@ -31,11 +39,9 @@ function Navigation ({ isLoaded }){
                 <h2 className='title'>o • a</h2>
             </div>
             <div className='navBar option'>
-                    <NavLink exact to='/' className='fas fa-home' style={{color: '#6294B7', textDecoration: 'none'}} activeStyle={{ color: 'white', textDecoration: 'none'}}>   dashboard</NavLink>
                     {isLoaded && sessionLinks}
             </div>
         </div>
     );
 }
-
 export default Navigation;

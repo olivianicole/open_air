@@ -5,6 +5,7 @@ const cors = require('cors');
 const csurf = require('csurf');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
 const { environment } = require('./config'); // grabbing the environment variable from the index.js file in the config folder
 const isProduction = environment === 'production'; // we want to check the environment and allow 'isProduction' to be true  when the environment is in production
@@ -12,7 +13,8 @@ const isProduction = environment === 'production'; // we want to check the envir
 
 app.use(morgan('dev')); // connecting the morgan middleware for logging information about requests and responses
 app.use(cookieParser()); // used to parse cookies
-app.use(express.json()); // middleware for parsing JSON bodies of requests with content-type of 'application/json'
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json()); // middleware for parsing JSON bodies of requests with content-type of 'application/json'
 const { ValidationError } = require('sequelize');
 // Security Middleware
 if (!isProduction) {

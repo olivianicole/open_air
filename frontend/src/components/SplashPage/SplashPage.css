@@ -3,16 +3,18 @@
     flex-direction: column;
     width: 100%;
     align-items: flex-end;
-    margin-right: 200px;
-    margin-bottom: 140px;
 }
 
 .page1 {
     height: 370px;
+
     border-radius: 10px;
     background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .page2 {
     display: flex;
@@ -39,6 +41,9 @@
     background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .page5 {
     height: 510px;
@@ -95,6 +100,20 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.medium_text {
+    color: #f4c2c2;
+    position: relative;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.medium_text_white {
+    color: white;
+    position: relative;
+    padding: 10px;
+    font-size: 50px;
+}
+
 .descriptor_text {
     color: white;
     position: relative;
@@ -124,6 +143,20 @@
     color: white;
     
 }
+.nav_button {
+    border: #f4c2c2 solid 0.5px;
+    border-radius: 2px;
+
+    width: 300px;
+    height: 40px;
+    background-color: #f4c2c2;
+    margin: 20px 10px 10px 10px;
+
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    
+}
 
 .logo {
     width: 200px;
@@ -143,13 +176,15 @@
 }
 
 .post_icon {
-    color: white;
-    background-color:salmon;
-    margin: 50px;
-    height: 175px;
-    width:  160px;
+    color: #6294B7;
+    background-color: white;
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+
     border-radius: 100px;
-    font-size: 50px;
+
+    font-size: 140px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
