@@ -1,5 +1,4 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import './SplashPage.css'
 
 export default function Page2 (){

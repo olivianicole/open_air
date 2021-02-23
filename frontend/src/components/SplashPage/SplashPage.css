@@ -58,6 +58,9 @@
     background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .site_title {
