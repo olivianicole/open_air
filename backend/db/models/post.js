@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     updatedAt: DataTypes.DATE
   }, {});
   Post.associate = function(models) {
-    // associations can be defined here
+    Post.belongsTo(models.User, { foreignKey: 'userId' });
   };
   return Post;
 };

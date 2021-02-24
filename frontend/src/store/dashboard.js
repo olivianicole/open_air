@@ -1,29 +1,29 @@
-const LOAD = '/dash/LOAD';
+// import { csrfFetch } from './csrf';
 
-const load = (list) => ({
+const LOAD = '/dashboard/LOAD';
+
+const load = (posts) => ({
     type: LOAD,
-    list,
+    posts,
 });
 
+
+
 export const getPosts = () => async (dispatch) => {
-    const response = await fetch(`/api/dashboard`, {
-        method: 'POST',
-        headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-    });
+    
+    const response = await fetch(`/api/dashboard`);
+    console.log('RESPONSE IS HERE:', response);
     if (response.ok) {
         const posts = await response.json();
+       
         dispatch(load(posts));
     }
 };
 
-const initialState = {
-    posts: [],
-};
+const initialState = [];
 
 const shufflePosts = (posts) => {
-    let currentIndex = posts.length
+    let currentIndex = posts.length;
     let temporaryValue;
     let randomIndex;
 
@@ -34,20 +34,17 @@ const shufflePosts = (posts) => {
         posts[currentIndex] = posts[randomIndex];
         posts[randomIndex] = temporaryValue;
     }
+    console.log('POSTS:', posts)
     return posts;
 }
+
 const dashboardReducer = (state = initialState, action) => {
+    let newState;
     switch (action.type) {
         case LOAD: {
-            const allPosts = {};
-            action.posts.forEach((post) => {
-                allPosts[post.id] = post;
-            });
-            return {
-                ...allPosts,
-                ...state,
-                posts: shufflePosts(action.post),
-            };
+            const newPosts = shufflePosts(action.posts)
+            newState = [...state, ...newPosts];
+            return newState;
         }
         // next case
         default:

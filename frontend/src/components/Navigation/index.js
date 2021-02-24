@@ -12,7 +12,7 @@ function Navigation ({ isLoaded }){
         sessionLinks = (
             <>
                 <div className='navBar option'>
-                    <NavLink exact to='/' className='fas fa-home' style={{color: '#6294B7', textDecoration: 'none'}} activeStyle={{ color: 'white', textDecoration: 'none'}}>   dashboard</NavLink>
+                    <NavLink exact to='/dashboard' className='fas fa-home' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: 'grey', textDecoration: 'none'}}></NavLink>
                 </div>
                 <ProfileButton user={sessionUser} />
             </>
@@ -21,27 +21,25 @@ function Navigation ({ isLoaded }){
         sessionLinks = (
             <>
                 <div className='option'>
-                    <NavLink exact to='/' className='fas fa-home' style={{color: '#6294B7', textDecoration: 'none'}} activeStyle={{ color: 'white', textDecoration: 'none'}}>   home</NavLink>
+                    <NavLink exact to='/' className='fas fa-home' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: '#grey', textDecoration: 'none'}}></NavLink>
                 </div>
                 <div className='option'>
-                    <NavLink to='/login' className='fas fa-user-plus' style={{color: '#6294B7', textDecoration: 'none'}} activeStyle={{ color: 'white', textDecoration: 'none'}}>   log in</NavLink>
+                    <NavLink to='/login' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: 'grey', textDecoration: 'none'}}>   log in</NavLink>
                 </div>
                 <div className='option'>
-                    <NavLink to='/signup' className='fas fa-sign-in-alt' style={{color: '#6294B7', textDecoration: 'none'}} activeStyle={{ color: 'white', textDecoration: 'none'}}>   sign up</NavLink>
+                    <NavLink to='/signup' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: 'grey', textDecoration: 'none'}}>   sign up</NavLink>
                 </div>
             </>
         );
     }
 
     return (
-        <div className='container'>
-            <div className='header'>
-                <h2 className='title'>o • a</h2>
-            </div>
-            <div className='navBar option'>
-                    {isLoaded && sessionLinks}
-            </div>
+        <div className='header'>
+            <div className='title'>o • a</div>
+            {isLoaded && sessionLinks}
         </div>
+            
+        
     );
 }
 export default Navigation;

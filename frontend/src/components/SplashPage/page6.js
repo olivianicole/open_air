@@ -8,12 +8,8 @@ export default function Page6 (){
         <div className='page6'>
             <div className='site_title'>the air is open</div>
             <div className='descriptor_text'>why not speak up?</div>
-            <button className='button'>
-                <NavLink to='/signup' style={{color: 'white', textDecoration: 'none', fontFamily: 'helvetica'}}>sign up</NavLink>
-            </button>
-            <button className='button'>
-                <NavLink to='/login' style={{color: 'white', textDecoration: 'none', fontFamily: 'helvetica'}}>log in</NavLink>
-            </button>
+            <NavLink className='button' to='/signup' >sign up</NavLink>
+            <NavLink className='button' to='/login' >log in</NavLink>
         </div>
     )
 }
