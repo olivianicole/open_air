@@ -4,6 +4,7 @@ import { csrfFetch } from './csrf';
 
 const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser';
+const SET_POST = "session/setUser";
 
 const setUser = (user) => {
   return {
@@ -17,6 +18,11 @@ const removeUser = () => {
     type: REMOVE_USER,
   };
 };
+
+const setPost = (post) => ({
+  type: SET_POST,
+  payload: post,
+});
 
 export const login = (user) => async (dispatch) => {
   const { credential, password } = user;
@@ -61,6 +67,36 @@ export const logout = () => async (dispatch) => {
   dispatch(removeUser());
   return response;
 };
+
+export const createPost = (post) => async (dispatch) => {
+  const { type, title, text,  image } = post;
+  const formData = new FormData();
+  formData.append("type", type);
+  formData.append("title", title);
+  formData.append("text", text);
+
+  // for multiple files
+  // if (images && images.length !== 0) {
+  //   for (var i = 0; i < images.length; i++) {
+  //     formData.append("images", images[i]);
+  //   }
+  // }
+
+  // for single file
+  if (image) formData.append("image", image);
+
+  const res = await csrfFetch(`/api/posts/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+    body: formData,
+  });
+
+  const data = await res.json();
+  dispatch(setUser(data.user));
+};
+
 
 const initialState = { user: null };
 
