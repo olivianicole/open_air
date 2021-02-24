@@ -5,7 +5,7 @@
 }
 
 .page1 {
-    height: 370px;
+    height: 510px;
 
     border-radius: 10px;
     background-color: rgba(98, 148, 183, 0.2);
@@ -50,6 +50,9 @@
     background-color: rgba(98, 148, 183, 0.2);
     padding: 165px;
     margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .page6 {
     height: 510px;
@@ -108,6 +111,7 @@
     padding: 10px;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
 
 }
 
@@ -139,14 +143,14 @@
 
 }
 
-.button {
+.splash_button {
     border: #f4c2c2 solid 0.5px;
     border-radius: 2px;
 
     width: 300px;
     height: 40px;
     background-color: #f4c2c2;
-    margin: 20px 10px 10px 100px;
+    margin:  10px 20px 10px 20px;
 
     font-size: large;
     font-weight: bold;
@@ -174,32 +178,52 @@
 }
 
 .logo {
-    width: 200px;
-    height: 200px;
     border: #6294B7 solid 2px;
     text-align: center;
     border-radius: 100px;
     background-color: #6294B7;
-    color: #f4c2c2;
     font-size: 150px;
+    color: #f4c2c2;
+    height: 200px;
+    width: 200px;
 }
 
 .icon_container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
+}
+
+.text_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .post_icon {
     color: #6294B7;
     background-color: white;
     margin: 20px;
-    height: 200px;
-    width: 200px;
+    height: 220px;
+    width: 220px;
 
-    border-radius: 100px;
+    border-radius: 200px;
 
     font-size: 140px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textbox {
+    width: 200px;
+    overflow: wrap;
+    text-align: center;
+}
+
+.centered {
+    text-align:center;
 }

@@ -8,8 +8,8 @@ export default function Page6 (){
         <div className='page6'>
             <div className='site_title'>the air is open</div>
             <div className='descriptor_text'>why not speak up?</div>
-            <NavLink className='button' to='/signup' >sign up</NavLink>
-            <NavLink className='button' to='/login' >log in</NavLink>
+            <NavLink className='splash_button' to='/signup'>sign up</NavLink>
+            <NavLink className='splash_button' to='/login'>log in</NavLink>
         </div>
     )
 }
