@@ -95,5 +95,4 @@ module.exports = {
   multiplePrivateFileUpload,
   retrievePrivateFile,
   singleMulterUpload,
-  multipleMulterUpload,
 };

@@ -6,8 +6,12 @@ const load = (list) => ({
 });
 
 export const getPosts = () => async (dispatch) => {
-    const response = await fetch(`/api/dashboard`);
-
+    const response = await fetch(`/api/dashboard`, {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+    });
     if (response.ok) {
         const posts = await response.json();
         dispatch(load(posts));
@@ -52,3 +56,5 @@ const dashboardReducer = (state = initialState, action) => {
 };
 
 export default dashboardReducer;
+
+

@@ -9,7 +9,6 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       type: {
-        allowNull: false,
         type: Sequelize.STRING(10),
       },
       title: {

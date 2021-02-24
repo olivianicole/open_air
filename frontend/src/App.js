@@ -22,7 +22,7 @@ function App() {
             <Route path='/' exact>
               <SplashPage />
             </Route>
-            <Route path='/dash'>
+            <Route path='/dashboard'>
               <Navigation isLoaded={isLoaded} />
               <Dashboard />
             </Route>
