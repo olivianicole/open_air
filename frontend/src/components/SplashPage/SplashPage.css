@@ -1,4 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.page1 {
+    height: 370px;
+
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
+    padding: 165px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page2 {
+    display: flex;
+    height: 510px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
+    padding: 165px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.page3 {
+    height: 510px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
+    padding: 165px;
+    margin-bottom: 10px;
+}
+.page4 {
+    height: 510px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
+    padding: 165px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.page5 {
+    height: 510px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
+    padding: 165px;
+    margin-bottom: 10px;
+}
+.page6 {
+    height: 510px;
+    border-radius: 10px;
+    background-color: rgba(98, 148, 183, 0.2);
+    padding: 165px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .site_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0px 10px 10px 10px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 40%;
+    text-align: center;
+   
+
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+}
+
+.component_title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,15 +96,69 @@
     bottom: 40%;
     text-align: center;
     padding-top: 30px;
-
-
+    
     color: white;
-    font-size: 100px;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.medium_text {
+    color: #f4c2c2;
+    position: relative;
+    padding: 10px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
+
+.medium_text_white {
+    color: white;
+    position: relative;
+    padding: 10px;
+    font-size: 60px;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.descriptor_text {
+    color: white;
+    position: relative;
+    padding: 10px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.paragraph_text {
+    color: white;
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
 .button {
+    border: #f4c2c2 solid 0.5px;
+    border-radius: 2px;
+
+    width: 300px;
+    height: 40px;
+    background-color: #f4c2c2;
+    margin: 20px 10px 10px 100px;
+
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nav_button {
     border: #f4c2c2 solid 0.5px;
     border-radius: 2px;
 
@@ -31,27 +170,36 @@
     font-size: large;
     font-weight: bold;
     color: white;
+    
 }
-.page1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+
+.logo {
+    width: 200px;
+    height: 200px;
+    border: #6294B7 solid 2px;
     text-align: center;
-    height: 450px;
-    width: 500px;
+    border-radius: 100px;
+    background-color: #6294B7;
+    color: #f4c2c2;
+    font-size: 150px;
 }
 
-.descriptor_text {
-    color: white;
-    position: relative;
-    padding: 10px;
-    font-size: 30px;
+.icon_container {
+    display: flex;
+    flex-direction: row;
 
+}
+
+.post_icon {
+    color: #6294B7;
+    background-color: white;
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+
+    border-radius: 100px;
+
+    font-size: 140px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }

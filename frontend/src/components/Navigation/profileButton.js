@@ -34,9 +34,11 @@ function ProfileButton({ user }) {
                 <i className='fas fa-user-circle' />
             </button>
             {showMenu && (
-                <div>
-                    <div className='logout_list'>   {user.username}</div>
-                    <div className='logout_list'>   {user.email}</div>
+                <div className='logout_container'>
+                    <div className='user_info'>
+                        <div className='logout_list'>   {user.username}</div>
+                        <div className='logout_list'>   {user.email}</div>
+                    </div>
                     <div>
                         <button className='logout_button' onClick={logout}>Log Out</button>
                     </div>

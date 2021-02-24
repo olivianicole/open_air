@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
     // these scopes help protect sensitive user information that should not be exposed regarding the current session's user or to other users
   });
   User.associate = function(models) {
-    // associations can be defined here
+    User.hasMany(models.Post, { foreignKey: 'userId'});
   };
 
     // returns an object with the User instance information that is safe to save to a JWT
