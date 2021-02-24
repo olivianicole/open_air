@@ -30,8 +30,8 @@ function Dashboard() {
            <div className='create_post_bar'>create a post!</div>
                 {posts.map((post) => (
                         <div className='post' key={post.id}>
-                            <div>
-                                <div className='post_username'>{post.username}</div>
+                            <div className='user_info'>
+                                <div className='post_username'>{post.User.username}</div>
                                 <button className='follow_button'>follow</button>
                             </div>
                             <img src={post.image} className='post_image' />

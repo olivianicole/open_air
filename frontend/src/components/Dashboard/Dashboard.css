@@ -27,6 +27,21 @@
     height: 675px;
 
 }
+.user_info {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+}
+.post_username {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 10px;
+
+
+}
 .post_title {
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;

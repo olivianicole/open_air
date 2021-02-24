@@ -12,7 +12,7 @@ function Navigation ({ isLoaded }){
         sessionLinks = (
             <>
                 <div className='navBar option'>
-                    <NavLink exact to='/dashboard' className='fas fa-home' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: 'grey', textDecoration: 'none'}}></NavLink>
+                    <NavLink exact to='/dashboard' className='fas fa-home' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: '#a2cbe8', textDecoration: 'none'}}></NavLink>
                 </div>
                 <ProfileButton user={sessionUser} />
             </>
@@ -21,13 +21,13 @@ function Navigation ({ isLoaded }){
         sessionLinks = (
             <>
                 <div className='option'>
-                    <NavLink exact to='/' className='fas fa-home' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: '#grey', textDecoration: 'none'}}></NavLink>
+                    <NavLink exact to='/' className='fas fa-home' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: '#a2cbe8', textDecoration: 'none'}}></NavLink>
                 </div>
                 <div className='option'>
-                    <NavLink to='/login' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: 'grey', textDecoration: 'none'}}>   log in</NavLink>
+                    <NavLink to='/login' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: '#a2cbe8', textDecoration: 'none'}}>   log in</NavLink>
                 </div>
                 <div className='option'>
-                    <NavLink to='/signup' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: 'grey', textDecoration: 'none'}}>   sign up</NavLink>
+                    <NavLink to='/signup' style={{color: 'white', textDecoration: 'none'}} activeStyle={{ color: '#a2cbe8', textDecoration: 'none'}}>   sign up</NavLink>
                 </div>
             </>
         );
