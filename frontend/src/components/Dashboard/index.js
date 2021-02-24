@@ -1,6 +1,7 @@
 import React, { setState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { NavLink, Route, useParams } from 'react-router-dom';
+import * as sessionActions from '../../store/session';
+import { NavLink, useParams } from 'react-router-dom';
 
 import { getPosts } from '../../store/dashboard';
 import './Dashboard.css';
@@ -8,6 +9,7 @@ import './Dashboard.css';
 
 function Dashboard() {
     const dispatch = useDispatch();
+    const sessionUser = useSelector(state => state.session.user);
     const { postId } = useParams();
     const post = useSelector((state) => {
         return state.dashboard.posts.map((postId) => state.post[postId]);

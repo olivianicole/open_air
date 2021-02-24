@@ -8,8 +8,15 @@ const { Post } = require('../../db/models');
 
 import { singlePublicFileUpload } from '../../../awsS3.js';
 
+
+router.get(
+  "/", 
+  handleValidationErrors,
+  asyncHandler(async (req,res))
+)
+
 router.post(
-    "/image",
+    "/",
     singleMulterUpload("image"),
     handleValidationErrors,
     asyncHandler(async (req, res) => {
