@@ -1,6 +1,6 @@
-import React, { setState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { NavLink, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { getPosts } from '../../store/dashboard';
 import './Dashboard.css';
@@ -31,7 +31,7 @@ function Dashboard() {
                 {posts.map((post) => (
                         <div className='post' key={post.id}>
                             <div className='user_info'>
-                                <div className='post_username'>{post.User.username}</div>
+                                <NavLink to='/profile/username' className='username_button'>{post.User.username}</NavLink>
                                 <button className='follow_button'>follow</button>
                             </div>
                             <img src={post.image} className='post_image' />
