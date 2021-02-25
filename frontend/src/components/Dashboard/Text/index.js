@@ -1,29 +1,36 @@
-import Dashboard from '../Dashboard';
+import './Text.css';
+import { NavLink } from 'react-router-dom';
+
 
 function Text () {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
 
-        setErrors([]);
+    //     setErrors([]);
     
-            return dispatch(Post.create({ email, username, password }))
-                .catch (async (res) => {
-                    const data = await res.json();
-                    if (data && data.errors) setErrors(data.errors);
-                });
-    }
+    //         return dispatch(Post.create({ email, username, password }))
+    //             .catch (async (res) => {
+    //                 const data = await res.json();
+    //                 if (data && data.errors) setErrors(data.errors);
+    //             });
+    // }
     
     return (
-        <div>
-            <div>
-                <form method={post} action='/dashboard/text'>
-                    <input placeholder='title' />
-                    <input placeholder='text'/>
-                    <button type='submit' onClick={handleSubmit}></button>
-                </form>
-            </div>
-            <Dashboard />
+        <div className='text_div'>
+            <form method='POST' action='/dashboard/text' className='text_form'>
+                <div className='button_container'>
+                    <NavLink to='/dashboard' className='close'>X</NavLink>
+                    <button type='submit' className='text_button'>post</button>
+                </div>
+                <div className='posting_user'>username</div>
+                <input placeholder='Title' className='text_title' />
+                <textarea placeholder='spill it' rows='10' className='text_input' />
+                <textarea placeholder='#add tags' />
+                
+            </form>
         </div>
     )
 }
+
+export default Text;

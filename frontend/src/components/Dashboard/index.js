@@ -1,46 +1,37 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Dashboard from './Dashboard.js';
+import Text from './Text';
+import Image from './Image';
+import Link from './Link';
+import Video from './Video';
 
-import { getPosts } from '../../store/dashboard';
-import './Dashboard.css';
 
+function DashboardComponents () {
 
-function Dashboard() {
-    const dispatch = useDispatch();
-    const posts = useSelector((state) => {
-        console.log('STATE', state);
-        return state.dashboard;
-    });
-    const handlePosts = async () => {
-        const retrievePosts = await dispatch(getPosts());
-        return retrievePosts;
-    };
-
-    useEffect(() => {
-        handlePosts();
-    }, []);
-
-    if(!posts){
-        return null;
-    };
-
-    return(
-       <div className='dash_container'>
-           <div className='create_post_bar'>create a post!</div>
-                {posts.map((post) => (
-                        <div className='post' key={post.id}>
-                            <div className='user_info'>
-                                <NavLink to='/profile/username' className='username_button'>{post.User.username}</NavLink>
-                                <button className='follow_button'>follow</button>
-                            </div>
-                            <img src={post.image} className='post_image' />
-                            <div className='post_title'>{post.title}</div>
-                            <div className='post_text'>{post.text}</div>
-                        </div>
-                ))}
-       </div>
+    return (
+        <>
+            <Dashboard />
+                <Switch>
+                    <Route path='/dashboard/text'>
+                        <Text />
+                        {document.body.style.overflow ='hidden'}
+                    </Route>
+                    <Route path='/dashboard/image'>
+                        <Image />
+                        {document.body.style.overflow ='hidden'}
+                    </Route>
+                    <Route path='/dashboard/link'>
+                        <Link />
+                        {document.body.style.overflow ='hidden'}
+                    </Route>
+                    <Route path='/dashboard/video'>
+                        <Video />
+                        {document.body.style.overflow ='hidden'}
+                    </Route>
+                </Switch>
+        </>
     )
 }
 
-export default Dashboard;
+export default DashboardComponents;

@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   // accepts an object with a username, type, title, text
   // creates a post with the type, title, text, userId, and numLikes
   // returns the created post
-  User.postText = async function ({ type, title, text, userId, numLikes }) {
+  Post.postText = async function ({ type, title, text, userId, numLikes }) {
     
     const post = await Post.create({
       type,
