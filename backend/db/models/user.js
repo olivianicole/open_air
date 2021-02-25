@@ -51,6 +51,15 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Post, { foreignKey: 'userId'});
   };
 
+
+
+
+
+
+
+
+  
+
     // returns an object with the User instance information that is safe to save to a JWT
   User.prototype.toSafeObject = function() { // remember, this cannot be an arrow function
     const { id, username, email } = this; // context will be the User instance
