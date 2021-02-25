@@ -11,25 +11,27 @@ function DashboardComponents () {
 
     return (
         <>
-            <Dashboard />
-                <Switch>
-                    <Route path='/dashboard/text'>
-                        <Text />
-                        {document.body.style.overflow ='hidden'}
-                    </Route>
-                    <Route path='/dashboard/image'>
-                        <Image />
-                        {document.body.style.overflow ='hidden'}
-                    </Route>
-                    <Route path='/dashboard/link'>
-                        <Link />
-                        {document.body.style.overflow ='hidden'}
-                    </Route>
-                    <Route path='/dashboard/video'>
-                        <Video />
-                        {document.body.style.overflow ='hidden'}
-                    </Route>
-                </Switch>
+            <Dashboard />  
+            
+            <Switch>
+                <Route path='/dashboard/text'>
+                    <Text />
+                    {document.body.style.overflow ='hidden'}
+                </Route>
+                <Route path='/dashboard/image'>
+                    <Image />
+                    {document.body.style.overflow ='hidden'}
+                </Route>
+                <Route path='/dashboard/link'>
+                    <Link />
+                    {document.body.style.overflow ='hidden'}
+                </Route>
+                <Route path='/dashboard/video'>
+                    <Video />
+                    {document.body.style.overflow ='hidden'}
+                </Route>
+            </Switch>
+           
         </>
     )
 }

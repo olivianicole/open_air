@@ -21,7 +21,22 @@ router.get(
 }))
 
 router.post(
-    '/create',
+  '/text',
+  handleValidationErrors,
+  asyncHandler(async (req, res) => {
+    const {type, title, text, userId, numLikes} = req.body;
+    const post = await Post.create({
+      type,
+      title,
+      text,
+      userId,
+      numLikes
+    });
+    return res.json(post);
+  })
+)
+router.post(
+    '/image',
     singleMulterUpload("image"),
     handleValidationErrors,
     asyncHandler(async (req, res) => {
