@@ -8,10 +8,12 @@ const { Post, User } = require('../../db/models');
 
 const { singlePublicFileUpload } = require ('../../awsS3.js');
 const { singleMulterUpload } = require('../../awsS3.js');
+const { restoreUser } = require('../../utils/auth.js');
 
 router.get(
   '/', 
   handleValidationErrors, 
+  restoreUser,
   asyncHandler(async (req, res) => {
     const posts = await Post.findAll({
       include: { model: User}
@@ -23,6 +25,7 @@ router.get(
 router.post(
   '/text',
   handleValidationErrors,
+  restoreUser,
   asyncHandler(async (req, res) => {
     const {type, title, text, userId, numLikes} = req.body;
     const post = await Post.create({
@@ -37,6 +40,7 @@ router.post(
 )
 router.post(
     '/image',
+    restoreUser,
     singleMulterUpload("image"),
     handleValidationErrors,
     asyncHandler(async (req, res) => {

@@ -6,7 +6,11 @@ import SignUpForm from './components/SignupFormPage';
 import * as sessionActions from "./store/session";
 import Navigation from './components/Navigation';
 import SplashPage from './components/SplashPage';
-import DashboardComponent from './components/Dashboard';
+import Dashboard from './components/Dashboard';
+import Text from './components/Text';
+import Image from './components/Image';
+import Link from './components/Link';
+import Video from './components/Video'
 
 function App() {
   const dispatch = useDispatch();
@@ -22,16 +26,32 @@ function App() {
             <Route path='/' exact>
               <SplashPage />
             </Route>
-            <Route path='/dashboard'>
+            <Route path='/dashboard' exact>
               <Navigation isLoaded={isLoaded} />
-              <DashboardComponent />
+              <Dashboard />
+            </Route>
+            <Route path='/dashboard/text'>
+              <Navigation isLoaded={isLoaded} />
+              <Text />
+            </Route>
+            <Route path='/dashboard/image'>
+              <Navigation isLoaded={isLoaded} />
+              <Image  />
+            </Route>
+            <Route path='/dashbaord/link'>
+              <Navigation isLoaded={isLoaded} />
+              <Link />
+            </Route>
+            <Route path='/dashboard/video'>
+              <Navigation  isLoaded={isLoaded}/>
+              <Video />
             </Route>
             <Route path='/login'>
-              <Navigation isLoaded={isLoaded} />
+              <Navigation isLoaded={isLoaded}/>
               <LoginFormPage />
             </Route>
             <Route path='/signup'>
-              <Navigation isLoaded={isLoaded} />
+              <Navigation isLoaded={isLoaded}/>
               <SignUpForm />
             </Route>
         </Switch>
