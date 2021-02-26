@@ -29,39 +29,74 @@ router.post(
   asyncHandler(async (req, res) => {
     const {type, title, text, userId, numLikes} = req.body;
     const user = await User.findByPk(userId);
-    const post = await Post.create({
+    const newPost = await Post.create({
       type,
       title,
       text,
       userId,
-      numLikes
+      numLikes,
+    });
+    const post = await Post.findOne({
+      where: { id: newPost.id },
+      include: { model: User}
     });
     await setTokenCookie(res, user);
-    return res.json(post);
+    return res.json({post});
   })
 )
+
 router.post(
     '/image',
     singleMulterUpload("image"),
     handleValidationErrors,
-
+    restoreUser,
     asyncHandler(async (req, res) => {
       
-      const {title, text, userId} = req.body;
+      const {type, title, text, userId, numLikes} = req.body;
+      const user = await User.findByPk(userId);
+
       const image = await singlePublicFileUpload(req.file);
-      const post = await Post.create({
-        type: 'image',
+      const newPost = await Post.create({
+        type,
         title,
         text,
-        userId
+        image,
+        userId,
+        numLikes,
       });
-  
-      
-  
-      return res.json({
-        post,
+      const post = await Post.findOne({
+        where: { id: newPost.id },
+        include: { model: User }
       });
+      await setTokenCookie(res, user);
+      return res.json({post});
     })
   );
+
+  router.post(
+    '/link',
+    handleValidationErrors,
+    restoreUser,
+    asyncHandler(async (req, res) => {
+
+      const { type, title, text, link, userId, numLikes } = req.body;
+      const user = await User.findByPk(userId);
+
+      const newPost = await Post.create({
+        type,
+        title,
+        text,
+        link,
+        userId,
+        numLikes,
+      });
+      const post = await Post.findOne({
+        where: { id: newPost.id },
+        include: { model: User }
+      });
+      await setTokenCookie(res, user);
+      return res.json({post});
+    })
+  )
 
   module.exports = router;

@@ -2,24 +2,19 @@ import { csrfFetch } from './csrf';
 
 const LOAD = '/dashboard/LOAD';
 const NEW_POST = 'dashboard/NEW';
-const ADD_ONE = 'dashboard/ADD_ONE';
+
 
 const load = (posts) => ({
     type: LOAD,
     posts,
 });
 
-const addOnePost = post => ({
-    type: ADD_ONE,
-    post
-})
 
-const newPost = (post) => {
-    return {
-        type: NEW_POST,
-        post
-    }
-}
+const newPost = (post) => ({
+    type: NEW_POST,
+    post,
+})
+   
 
 
 
@@ -50,7 +45,30 @@ export const makePost = (post) => async dispatch => {
             numLikes: 0
         })
     });
-    console.log('MAKEPOST RESPONSE:', response)
+    
+    if (response.ok) {
+        const data = await response.json();
+        console.log(data.post)
+        dispatch(newPost(data.post));
+    }
+}
+
+export const postImage = (post) => async dispatch => {
+    const { title, text, image, userId } = post;
+    const response = await csrfFetch('/api/dashboard/image', {
+        method: 'POST',
+        body: JSON.stringify({
+            type: 'image',
+            title,
+            text,
+            image,
+            link: null,
+            video: null,
+            userId,
+            numLikes: 0
+        })
+    });
+
     if (response.ok) {
         const data = await response.json();
         dispatch(newPost(data.post));
@@ -58,6 +76,27 @@ export const makePost = (post) => async dispatch => {
 }
 
 
+export const postLink = (post) => async dispatch => {
+    const { title, text, link, userId } = post;
+    const response = await csrfFetch('/api/dashboard/link', {
+        method: 'POST', 
+        body: JSON.stringify({
+            type: 'link',
+            title,
+            text,
+            image:null,
+            link,
+            video:null,
+            userId,
+            numLikes: 0
+        })
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        dispatch(newPost(data.post))
+    }
+}
 
 const initialState = [];
 
@@ -76,6 +115,7 @@ const shufflePosts = (posts) => {
     return posts;
 }
 
+
 const dashboardReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
@@ -85,13 +125,8 @@ const dashboardReducer = (state = initialState, action) => {
             return newState;
         }
         case NEW_POST: {
-            newState = [... state, action.post, ]
+            newState = [...state, action.post];
             return newState;
-        }
-        case ADD_ONE: {
-            if (!state[action.post]) {
-                const newState = [...state, action.post]
-            }
         }
         default:
             return state;

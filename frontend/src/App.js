@@ -38,7 +38,7 @@ function App() {
               <Navigation isLoaded={isLoaded} />
               <Image  />
             </Route>
-            <Route path='/dashbaord/link'>
+            <Route path='/dashboard/link'>
               <Navigation isLoaded={isLoaded} />
               <PostLink />
             </Route>

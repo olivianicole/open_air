@@ -52,6 +52,12 @@
     border: none;
 }
 
+.url {
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    color:rgba(98, 148, 183, 0.9)
+}
 textarea {
     width: 100%;
     align-self: center;

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useParams, Redirect, useHistory, setState } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import * as dashboardActions from '../../store/dashboard.js';
 import './Text.css';
 
@@ -9,10 +9,9 @@ import './Text.css';
 function Text () {
     const dispatch = useDispatch();
     const history = useHistory();
-    // const { userId } = useParams();
     const [ title, setTitle ] = useState('');
     const [ text, setText ] = useState('');
-    const [errors, setErrors] = useState([]);
+    const [ errors, setErrors ] = useState([]);
     const sessionUser = useSelector((state) => state.session.user);
    
     const handleSubmit = async (e) => {
@@ -24,20 +23,11 @@ function Text () {
             userId: sessionUser.id,
         }
 
-
-            setErrors([])
-
-            return dispatch(dashboardActions.makePost(payload))
-                .catch (async (res) => {
-                    const data = await res.json();
-                    console.log("DATA DATA", data)
-                    if (!data.errors) {
-                        const {posts} = this.state;
-                        this.setState({posts})
-                        history.push('/dashboard')
-                    }
-                    else setErrors(data.errors);
-                });
+        setErrors([])
+        
+        dispatch(dashboardActions.makePost(payload))
+        
+        history.push('/dashboard');
     };
     
     return (
