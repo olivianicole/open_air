@@ -40,7 +40,7 @@ function Dashboard() {
                </div>
            </div>
                 {posts.map((post) => (
-                        <div className='post' key={post.id}>
+                        <div className='post' >
                             <div className='user_info'>
                                 <NavLink to='/profile/username' className='username_button'>{post.User.username}</NavLink>
                                 <button className='follow_button'>follow</button>

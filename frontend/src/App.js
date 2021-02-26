@@ -9,7 +9,7 @@ import SplashPage from './components/SplashPage';
 import Dashboard from './components/Dashboard';
 import Text from './components/Text';
 import Image from './components/Image';
-import Link from './components/Link';
+import PostLink from './components/Link';
 import Video from './components/Video'
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
             </Route>
             <Route path='/dashbaord/link'>
               <Navigation isLoaded={isLoaded} />
-              <Link />
+              <PostLink />
             </Route>
             <Route path='/dashboard/video'>
               <Navigation  isLoaded={isLoaded}/>

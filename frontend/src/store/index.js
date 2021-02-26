@@ -7,7 +7,6 @@ import postReducer from './post';
 const rootReducer = combineReducers({
   session: sessionReducer,
   dashboard: dashboardReducer,
-  post: postReducer,
 });
 
 let enhancer;

@@ -1,31 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useParams } from 'react-router-dom';
-import * as postActions from '../../store/post.js';
-import { getUsers } from '../../store/session';
+import { NavLink, useParams, Redirect, useHistory, setState } from 'react-router-dom';
+import * as dashboardActions from '../../store/dashboard.js';
 import './Text.css';
 
 
 
 function Text () {
     const dispatch = useDispatch();
-    const { userId } = useParams();
+    const history = useHistory();
+    // const { userId } = useParams();
     const [ title, setTitle ] = useState('');
     const [ text, setText ] = useState('');
     const [errors, setErrors] = useState([]);
     const sessionUser = useSelector((state) => state.session.user);
    
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const payload = {
+            title,
+            text, 
+            userId: sessionUser.id,
+        }
+
 
             setErrors([])
 
-            return dispatch(postActions.makePost({ type: 'text', title, text, image: null, link: null, video: null, userId, numLikes: 0 }))
+            return dispatch(dashboardActions.makePost(payload))
                 .catch (async (res) => {
                     const data = await res.json();
-                    if (data && data.errors) {
-                        document.getElementById('text_button').toggleAttribute('disabled');
-                    };
+                    console.log("DATA DATA", data)
+                    if (!data.errors) {
+                        const {posts} = this.state;
+                        this.setState({posts})
+                        history.push('/dashboard')
+                    }
+                    else setErrors(data.errors);
                 });
     };
     

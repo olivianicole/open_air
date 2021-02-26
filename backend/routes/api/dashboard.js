@@ -18,7 +18,7 @@ router.get(
     const posts = await Post.findAll({
       include: { model: User}
     });
-    
+  
     return res.json(posts);
 }))
 
@@ -28,6 +28,7 @@ router.post(
   restoreUser,
   asyncHandler(async (req, res) => {
     const {type, title, text, userId, numLikes} = req.body;
+    const user = await User.findByPk(userId);
     const post = await Post.create({
       type,
       title,
@@ -35,15 +36,17 @@ router.post(
       userId,
       numLikes
     });
+    await setTokenCookie(res, user);
     return res.json(post);
   })
 )
 router.post(
     '/image',
-    restoreUser,
     singleMulterUpload("image"),
     handleValidationErrors,
+
     asyncHandler(async (req, res) => {
+      
       const {title, text, userId} = req.body;
       const image = await singlePublicFileUpload(req.file);
       const post = await Post.create({
@@ -53,7 +56,7 @@ router.post(
         userId
       });
   
-      await setTokenCookie(res, post);
+      
   
       return res.json({
         post,

@@ -2,7 +2,7 @@ import './Link.css';
 import { Link, NavLink } from 'react-router-dom';
 
 
-function Text () {
+function PostLink () {
 
     // const handleSubmit = (e) => {
     //     e.preventDefault();
@@ -34,4 +34,4 @@ function Text () {
     )
     }
 
-    export default Link;
+    export default PostLink;

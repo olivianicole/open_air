@@ -25,13 +25,7 @@ const validateSignup = [
       .exists({ checkFalsy: true })
       .isLength({ min: 6 })
       .withMessage('Password must be 6 characters or more.'),
-    check('blog_name')
-      .exists({ checkFalsy: true })
-      .isLength({ min: 5 })
-      .withMessage('Blog name must be 5 characters or more.') ,
-      handleValidationErrors,
-  ];
-
+];
 
 // Sign up
 router.post(
