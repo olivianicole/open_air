@@ -17,14 +17,33 @@
     width: 510px;
     height: 104px;
     padding: 15px;
+    display: flex;
 
 }
+
+.create_post_container {
+    border:rgba(173, 216, 230, 0.3) solid 1px;
+    border-radius: 3px;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post_link {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
 .post {
     border-radius: 4px;
-    margin: 50px;
+    margin: 30px;
     background-color: white;
     width: 540px;
-    height: 675px;
+    height: auto;
 
 }
 .user_info {
@@ -46,13 +65,13 @@
 }
 .post_title {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;;
     font-size: 30px;
 }
 
 .post_text {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
+    padding: 20px;
 }
 .post_image {
     height: 500px;
@@ -69,3 +88,9 @@
    
 }
 
+.posted_url {
+    color:#6294B7;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px 10px 10px 20px;
+}
