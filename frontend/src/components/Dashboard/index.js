@@ -48,14 +48,19 @@ function Dashboard() {
                                 <div className='user_info'>
                                     <NavLink to='/profile/username' className='username_button'>{post.User.username}</NavLink>
                                     <button className='follow_button'>follow</button>
+                                
                                 </div>
                                 {post.image && <img src={post.image} className='post_image' />}
-
                                 <div className='post_title'>{post.title}</div>
-                                {post.link &&   <div className='posted_url' >
-                                                {post.link}
-                                                    <a href={post.link} />
-                                                </div>}
+                               
+                                {post.link && 
+                                
+                                    <a href={post.link} className='posted_url'>
+                                        {post.link}
+                                    </a>
+                                
+                                }
+                                         
                                 <div className='post_text'>{post.text}</div>
                             </div>
                     ))}

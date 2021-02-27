@@ -88,9 +88,11 @@
    
 }
 
+
 .posted_url {
     color:#6294B7;
     font-family: Arial, Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: 10px 10px 10px 20px;
+    font-size: 20px;
 }
