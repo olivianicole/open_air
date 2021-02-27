@@ -59,7 +59,6 @@ function Image () {
                     onChange={(e) => setText(e.target.value)}
                 />
                 <textarea placeholder='#add tags' />
-                
             </form>
         </div>
     )

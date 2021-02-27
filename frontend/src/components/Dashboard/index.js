@@ -57,6 +57,7 @@ function Dashboard() {
                                                     <a href={post.link} />
                                                 </div>}
                                 <div className='post_text'>{post.text}</div>
+                                <span className='heart'></span>
                             </div>
                     ))}
            </div>
