@@ -17,8 +17,7 @@ function Image () {
     const sessionUser = useSelector((state) => state.session.user);
     
     const handleSubmit = (e) => {
-        e.preventDefault();
-        
+    
         const payload = {
             title,
             text,
@@ -40,7 +39,7 @@ function Image () {
     
     return (
         <div className='text_div'>
-            <form method='POST' action='/dashboard/text' className='text_form'>
+            <form method='POST' action='/dashboard/text' className='text_form' encType='multipart/form-data'>
                 <div className='button_container'>
                     <NavLink to='/dashboard' className='close' >X</NavLink>
                     <button type='submit' id='text_button' className='text_button' onClick={handleSubmit} >post</button>
@@ -51,7 +50,7 @@ function Image () {
                     className='text_title'
                     onChange={(e) => setTitle(e.target.value)}
                  />
-                 <input className='image_upload' type="file" onChange={updateFile} />
+                 <input className='image_upload' type="file" onChange={updateFile, console.log(`image was set! ${image}`)} />
                 <textarea 
                     placeholder='spill it' 
                     rows='10' 

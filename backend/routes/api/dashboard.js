@@ -55,17 +55,18 @@ router.post(
       const {type, title, text, userId, numLikes} = req.body;
       const user = await User.findByPk(userId);
 
-      const image = await singlePublicFileUpload(req.file);
+      const imageUrl = await singlePublicFileUpload(req.file);
+
       const newPost = await Post.create({
         type,
         title,
         text,
-        image,
+        image: imageUrl,
         userId,
         numLikes,
       });
       const post = await Post.findOne({
-        where: { id: newPost.id },
+        where: { id: newPost.id, image: newPosit.image },
         include: { model: User }
       });
       await setTokenCookie(res, user);
