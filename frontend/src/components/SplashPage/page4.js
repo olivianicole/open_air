@@ -1,7 +1,7 @@
 import React from 'react';
 import './SplashPage.css'
 
-export default function Page4 (){
+function Page4 (){
     
     return (
         <div className='page4'>
@@ -11,3 +11,6 @@ export default function Page4 (){
         </div>
     )
 }
+
+
+export default  Page4;

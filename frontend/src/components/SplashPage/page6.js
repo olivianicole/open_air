@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './SplashPage.css'
 
-export default function Page6 (){
+function Page6 (){
     
     return (
         <div className='page6'>
@@ -13,3 +13,5 @@ export default function Page6 (){
         </div>
     )
 }
+
+export default Page6;
