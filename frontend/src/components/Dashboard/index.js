@@ -1,12 +1,17 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { getPosts } from '../../store/dashboard';
 import './Dashboard.css';
 
 
 function Dashboard() {
     const dispatch = useDispatch();
+    const sessionUser = useSelector((state) => state.session.user);
+
+    if (!sessionUser) {
+        <Redirect to='/' />
+    }
 
     const posts = useSelector((state) => {
         return state.dashboard;
