@@ -1,11 +1,11 @@
 import React from 'react';
 import './SplashPage.css'
-import Page1 from './SplashPage/Page1.js';
-import Page2 from './SplashPage/Page2.js';
-import Page3 from './SplashPage/Page3.js';
-import Page4 from './SplashPage/Page4.js';
-import Page5 from './SplashPage/Page5.js';
-import Page6 from './SplashPage/Page6.js';
+import Page1 from '../SplashPage/Page1.js';
+import Page2 from '../SplashPage/Page2.js';
+import Page3 from '../SplashPage/Page3.js';
+import Page4 from '../SplashPage/Page4.js';
+import Page5 from '../SplashPage/Page5.js';
+import Page6 from '../SplashPage/Page6.js';
 
 export default function SplashPage (){
     
