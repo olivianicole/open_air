@@ -20,7 +20,8 @@
     font-size: 35px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
+    margin-left: 650px;
+    margin-right: auto;
 
 }
 
@@ -33,22 +34,28 @@
 
 
 .logout_button {
-
     border: #f4c2c2 solid 0.5px;
     border-radius: 5px;
 
     width: auto;
-    height: 30px;
+    height: 25px;
     background-color: #f4c2c2;
     
-    
-
-    font-size: large;
+    font-size: 10px;
     font-weight: bold;
     color: white;
     display: flex;
+    align-self: center;
     align-items: center;
+    margin-top:auto;
+    margin-bottom: auto;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    
 }
+
 
 .logout_list {
     padding: 3px;
