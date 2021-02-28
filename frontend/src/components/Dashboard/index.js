@@ -56,6 +56,7 @@ function Dashboard() {
                     {posts?.map((post) => (
                             <div className='post' >
                                 <div className='user_info'>
+                                    {console.log('user user user', post.User)}
                                     <NavLink to='/profile/username' className='username_button'>{post.User.username}</NavLink>
                                     <button className='follow_button'>follow</button>
                                     {/* { sessionUser.id === post.userId &&
@@ -132,17 +133,3 @@ function Dashboard() {
 export default Dashboard;
 
 
-{/* <div className='post' >
-                                <div className='user_info'>
-                                    <NavLink to='/profile/username' className='username_button'>{post.User.username}</NavLink>
-                                    <button className='follow_button'>follow</button>
-                                
-                                </div>
-                                {post.image && <img src={post.image} className='post_image' />}
-                                <div className='post_title'>{post.title}</div>
-                               
-                                {post.link && 
-                                
-                                    <a href={post.link} className='posted_url'>
-                                        {post.link}
-                                    </a> */}
