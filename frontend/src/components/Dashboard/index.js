@@ -51,7 +51,7 @@ function Dashboard() {
                         <NavLink to='/dashboard/video' className='post_link'>v i d e o</NavLink>
                    </div>
                </div>
-                    <div className='post_and_sidebar_container'>
+                <div className='post_and_sidebar_container'>
                         <div className='post_stack'>
                     {posts?.map((post) => (
                             <div className='post' >
@@ -87,7 +87,7 @@ function Dashboard() {
                                 <div className='post_text'>{post.text}</div>
                             </div>
                     ))}
-           </div>
+                </div>
                          <div className='sidebar'>
                             <div className='sidebar_title'>check out these blogs</div>
                             <div className='sidebar_bar'>_______________________________________</div>
