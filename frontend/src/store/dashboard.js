@@ -1,7 +1,7 @@
 import { csrfFetch } from './csrf';
 
 const LOAD = '/dashboard/LOAD';
-const NEW_POST = 'dashboard/NEW';
+const NEW_POST = '/dashboard/NEW';
 
 
 const load = (posts) => ({
@@ -29,6 +29,17 @@ export const getPosts = () => async (dispatch) => {
     }
 };
 
+// export const getUsers = () => async (dispatch) => {
+    
+//     const response = await fetch(`/api/dashboard`);
+
+//     if (response.ok) {
+//         const users = await response.json();
+
+//         dispatch(load(users));
+//     }
+// }
+
 
 export const makePost = (post) => async dispatch => {
     const { title, text,  userId} = post;
@@ -55,18 +66,19 @@ export const makePost = (post) => async dispatch => {
 
 export const postImage = (post) => async dispatch => {
     const { title, text, image, userId } = post;
+    const formData = new formData();
+    formData.append('type', 'image');
+    formData.append('title', title);
+    formData.append('text', text);
+    formData.append('userId', userId)
+    if (image) formData.append('image', image);
+
     const response = await csrfFetch('/api/dashboard/image', {
         method: 'POST',
-        body: JSON.stringify({
-            type: 'image',
-            title,
-            text,
-            image,
-            link: null,
-            video: null,
-            userId,
-            numLikes: 0
-        })
+        body: formData,
+        headers: {
+            'Content-Type': 'multiport/form-data',
+        }
     });
 
     if (response.ok) {

@@ -9,6 +9,8 @@
     right: 0px;
     left: 0px;
     height: auto;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .create_post_bar {
@@ -18,7 +20,7 @@
     height: 104px;
     padding: 15px;
     display: flex;
-
+    margin-right: 200px;
 }
 
 .create_post_container {
@@ -95,4 +97,90 @@
     font-weight: bold;
     padding: 10px 10px 10px 20px;
     font-size: 20px;
+}
+
+.post_stack {
+   width: 100%;
+   margin-right: 200px;
+}
+.post_and_sidebar_container {
+  display: flex;
+}
+
+.sidebar {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    left: 1050px;
+    margin-left: 100px;
+    
+}
+
+.sidebar_title {
+    color: white;
+    font-family: georgia;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+   
+}
+.sidebar_user_chunk {
+    display: flex;
+    flex-direction: row;
+    
+
+}
+    .sidebar_prof_pic {
+        height: 75px;
+        width: 75px;
+        margin: 10px;
+    }
+
+    .sidebar_username {
+        align-self: center;
+        color: black;
+        font-size: 18px;
+        padding: 5px;
+        font-weight: bolder;
+    }
+
+    .sidebar_follow_button {
+        border: none;
+        padding: 10px;
+        background-color: #6294B7;
+        font-weight: bolder;
+        color: #f4c2c2;
+        font-size: 20px;
+        width: auto;
+        height: 40px;
+        margin-left: 40px;
+        margin-top: 25px;
+        
+    }
+    
+.sidebar_bar {
+        color: lightblue;
+        margin-bottom: 10px;
+    }
+.sidebar_spot {
+    color: white;
+    font-family: georgia;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.sidebar_spotlight_post {
+    border-radius: 4px;
+    margin: 30px;
+    background-color: white;
+    width: 260px;
+    height: auto;
+
+}
+
+.sidebar_spotlight_image {
+    width: 260px;
+    height: auto;
 }
