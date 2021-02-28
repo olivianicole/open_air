@@ -198,30 +198,33 @@
 .text_container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    
 }
 
 .post_icon {
-    color: #6294B7;
-    background-color: white;
-    margin: 20px;
-    height: 220px;
-    width: 220px;
-
-    border-radius: 200px;
-
-    font-size: 140px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    border: none;
+    color: white;
+    font-size: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0px;
 }
 
 .textbox {
-    width: 200px;
-    overflow: wrap;
+
+    width: 150px;
     text-align: center;
+    font-size: 35px;
+    color: white;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 35px;
+    
 }
 
 .centered {

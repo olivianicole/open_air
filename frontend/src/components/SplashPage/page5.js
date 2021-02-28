@@ -24,16 +24,25 @@ function Page5 (){
             </div>
             <div className='text_container'>
 
-                <div className='descriptor_text textbox'>
+                <div 
+                    className='textbox'
+                    style={{marginRight: '80px', marginLeft: '0px'}}
+                    >
                     need a place for your thoughts?
                 </div>
-                <div className='descriptor_text textbox'>
+                <div className='textbox'>
                     share photos of the dreamy vacation you took
                 </div>
-                <div className='descriptor_text textbox'>
+                <div 
+                    className='textbox'
+                    style={{marginRight: '2Opx'}}
+                    >
                     link your favorite recipe
                 </div>
-                <div className='descriptor_text textbox'>
+                <div 
+                    className='textbox'
+                    style={{marginRight: '0px', marginLeft: '80px'}}
+                    >    
                     *insert cute animal video here*
                 </div>
             </div>
