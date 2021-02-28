@@ -55,12 +55,12 @@ router.post(
       const {type, title, text, userId, numLikes} = req.body;
       const user = await User.findByPk(userId);
 
-      const image = await singlePublicFileUpload(req.file);
+      const img = await singlePublicFileUpload(req.file);
       const newPost = await Post.create({
         type,
         title,
         text,
-        image,
+        image: img,
         userId,
         numLikes,
       });

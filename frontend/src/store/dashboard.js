@@ -65,7 +65,7 @@ export const makePost = (post) => async dispatch => {
 }
 
 export const postImage = (post) => async dispatch => {
-    const { title, text, image, userId } = post;
+    const { title, text, userId, image } = post;
     const formData = new formData();
     formData.append('type', 'image');
     formData.append('title', title);
@@ -75,10 +75,10 @@ export const postImage = (post) => async dispatch => {
 
     const response = await csrfFetch('/api/dashboard/image', {
         method: 'POST',
-        body: formData,
         headers: {
-            'Content-Type': 'multiport/form-data',
-        }
+            'Content-Type': 'multipart/form-data',
+        },
+        body: formData,
     });
 
     if (response.ok) {
