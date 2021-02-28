@@ -6,7 +6,7 @@
     background-size: cover;
 } */
 
-.form_password {
+/* .form_password {
     border: white solid 0.5px;
     border-radius: 2px;
 
@@ -14,15 +14,15 @@
     width: 300px;
     height: 40px;
     
-}
+} */
 
 .form_blog_name {
     border: white solid 0.5px;
     border-radius: 2px;
     
     margin: 0px 10px 10px 10px;
-    width: 300px;
-    height: 40px;
+    width: 400px;
+    height: 80px;
 }
 
 

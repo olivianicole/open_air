@@ -49,7 +49,7 @@ function LoginFormPage() {
                     value={credential}
                     onChange={(e) => setCredential(e.target.value)}
                     required
-                    placeholder='Email'
+                    placeholder='email'
                     />
                 <input
                     className='form_password'
@@ -57,7 +57,7 @@ function LoginFormPage() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    placeholder='Password'
+                    placeholder='password'
                     />
                 <button type='submit' className='form_submit_button'>log in</button>
                 <button type='submit' className='form_submit_button' onClick={handleDemo}>demo user</button>

@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;;
     position: absolute;
     margin: auto;
     left: 0;
@@ -19,6 +20,10 @@ body {
     text-align: center;
     height: 450px;
     width: 500px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+
 }
 
 .site_title {
@@ -47,27 +52,29 @@ body {
 .form_email {
     border: white solid 0.5px;
     border-radius: 2px;
-
+    
     margin: 0px 10px 0px 10px;
-    width: 300px;
-    height: 40px;    
+    width: 400px;
+    height: 80px;
+ 
 }
 
 .form_password {
     border: white solid 0.5px;
     border-radius: 2px;
-
+    
     margin: 0px 10px 10px 10px;
-    width: 300px;
-    height: 40px;
+    width: 400px;
+    height: 80px;
+
 }
 
 .form_submit_button {
     border: #f4c2c2 solid 0.5px;
     border-radius: 2px;
 
-    width: 300px;
-    height: 40px;
+    width: 400px;
+    height: 80px;
     background-color: #f4c2c2;
     margin: 20px 10px 10px 10px;
 
