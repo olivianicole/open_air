@@ -6,7 +6,7 @@ import './Link.css';
 
 
 
-function Link () {
+function PostLink () {
     const dispatch = useDispatch();
     const history = useHistory();
     const [ title, setTitle ] = useState('');
@@ -63,4 +63,4 @@ function Link () {
     )
 }
 
-export default Link;
+export default PostLink;

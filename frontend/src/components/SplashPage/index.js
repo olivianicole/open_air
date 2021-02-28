@@ -7,7 +7,9 @@ import Page3 from './page3.js';
 import Page4 from './page4.js';
 import Page5 from './page5.js';
 import Page6 from './page6.js';
-export default function SplashPage (){
+
+
+function SplashPage (){
     
     return (
         <div className='container'>
@@ -33,3 +35,4 @@ export default function SplashPage (){
     )
 }
 
+export default SplashPage;
