@@ -1,7 +1,7 @@
 import React from 'react';
 import './SplashPage.css'
 
-function Page2 (){
+export default function Page2 (){
     
     return (
         <div className='page2'>
@@ -11,5 +11,3 @@ function Page2 (){
         </div>
     )
 }
-
-export default Page2;
