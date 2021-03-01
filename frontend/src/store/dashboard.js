@@ -70,8 +70,11 @@ export const postImage = (post) => async dispatch => {
     formData.append('type', 'image');
     formData.append('title', title);
     formData.append('text', text);
-    formData.append('userId', userId)
-    if (image) formData.append('image', image);
+    formData.append('image', image);
+    formData.append('link', null);
+    formData.append('video', null);
+    formData.append('userId', userId);
+    formData.append('numLikes', 0);
 
     const response = await csrfFetch('/api/dashboard/image', {
         method: 'POST',
